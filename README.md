@@ -52,7 +52,9 @@ Wispr Flow is a general-purpose voice dictation tool — it polishes speech for 
 | `qwen3:8b` | ~5 GB | Dual-mode thinking/non-thinking, 100+ languages, 131K context |
 | `deepseek-r1-distill-qwen:7b` | ~5 GB | Distilled reasoning, great for complex prompt restructuring |
 
-> 💡 **Pipeline recommandé :** Whisper pour la transcription (temps réel, ultra rapide) → modèle texte pour le refactor/traduction. Séparer les deux = plus rapide et plus précis qu'un modèle multimodal qui fait les deux. **qwen3.5:4b** est le sweet spot pour le refactor — 3 GB, latence minimale, multilingue natif.
+> 💡 **STT recommandé :** [Voxtral Mini 4B](https://huggingface.co/mistralai/Voxtral-Mini-4B-Realtime-2602) (Apache 2.0) — transcription + compréhension sémantique native, streaming temps réel, latence <500ms. Peut potentiellement gérer les corrections vocales en un seul appel (transcrire + filtrer les hésitations), éliminant l'étape refactor. Sinon, Whisper Large v3 reste le meilleur STT pur. À benchmarker en pratique.
+>
+> **Pipeline :** STT (Voxtral Mini ou Whisper) → modèle texte (qwen3.5:4b) pour le refactor/traduction. Deux spécialistes > un généraliste.
 
 ## Stack
 
