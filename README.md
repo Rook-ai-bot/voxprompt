@@ -29,7 +29,7 @@ Wispr Flow is a general-purpose voice dictation tool — it polishes speech for 
 - [ ] Custom system prompt for output style
 - [ ] Paste into any active input field (AXUIElement / CGEvent)
 - [ ] Menu bar app with quick settings
-- [ ] Provider presets: OpenAI, Anthropic, Google Gemini, OpenRouter, Ollama, LM Studio (+ custom)
+- [ ] Provider presets: OpenAI, Anthropic, Google Gemini, OpenRouter, Ollama, LM Studio, Mistral (+ custom)
 
 ## Stack
 
