@@ -47,13 +47,13 @@ Wispr Flow is a general-purpose voice dictation tool — it polishes speech for 
 
 | Model | Size | Why |
 |-------|------|-----|
-| `qwen3:8b` | ~5 GB | Best multilingual small model — handles French → English well |
-| `llama3.1:8b` | ~5 GB | Strong general-purpose, good instruction following |
-| `mistral:7b` | ~4 GB | Lightweight, fast inference on any Mac |
-| `deepseek-r1:8b` | ~5 GB | Good reasoning for complex prompt restructuring |
-| `phi4:14b` | ~9 GB | Excellent quality/size ratio if you have 16 GB+ RAM |
+| `qwen3.5:4b` | ~3 GB | Best multilingual small model — beats GPT-OSS at 4B, handles fr→en natively |
+| `phi4-mini:3.8b` | ~2.5 GB | Strong reasoning & instruction following, MIT license, tiny footprint |
+| `qwen3:8b` | ~5 GB | Dual-mode thinking/non-thinking, 100+ languages, 131K context |
+| `deepseek-r1-distill-qwen:7b` | ~5 GB | Distilled reasoning, great for complex prompt restructuring |
+| `gemma-3n-e2b` | ~3 GB | Mobile-first multimodal (text + audio + image), built-in speech understanding |
 
-> 💡 For local transcription, pair with Whisper (`ollama run whisper` or LM Studio). For prompt refactoring, a 7–8B model is plenty — latency matters more than raw capability here.
+> 💡 For prompt refactoring specifically, **qwen3.5:4b** is the sweet spot — fast inference, strong multilingual, beats models 10x its size. For audio transcription, **gemma-3n-e2b** can handle speech-to-text natively without a separate Whisper step.
 
 ## Stack
 
