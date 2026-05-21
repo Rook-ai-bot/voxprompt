@@ -51,9 +51,8 @@ Wispr Flow is a general-purpose voice dictation tool — it polishes speech for 
 | `phi4-mini:3.8b` | ~2.5 GB | Strong reasoning & instruction following, MIT license, tiny footprint |
 | `qwen3:8b` | ~5 GB | Dual-mode thinking/non-thinking, 100+ languages, 131K context |
 | `deepseek-r1-distill-qwen:7b` | ~5 GB | Distilled reasoning, great for complex prompt restructuring |
-| `gemma-3n-e2b` | ~3 GB | Mobile-first multimodal (text + audio + image), built-in speech understanding |
 
-> 💡 For prompt refactoring specifically, **qwen3.5:4b** is the sweet spot — fast inference, strong multilingual, beats models 10x its size. For audio transcription, **gemma-3n-e2b** can handle speech-to-text natively without a separate Whisper step.
+> 💡 **Pipeline recommandé :** Whisper pour la transcription (temps réel, ultra rapide) → modèle texte pour le refactor/traduction. Séparer les deux = plus rapide et plus précis qu'un modèle multimodal qui fait les deux. **qwen3.5:4b** est le sweet spot pour le refactor — 3 GB, latence minimale, multilingue natif.
 
 ## Stack
 
