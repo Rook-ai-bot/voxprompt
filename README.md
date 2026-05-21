@@ -31,6 +31,30 @@ Wispr Flow is a general-purpose voice dictation tool — it polishes speech for 
 - [ ] Menu bar app with quick settings
 - [ ] Provider presets: OpenAI, Anthropic, Google Gemini, OpenRouter, Ollama, LM Studio, Mistral (+ custom)
 
+## Recommended models
+
+### Cloud
+
+| Provider | Model | Why |
+|----------|-------|-----|
+| OpenAI | `gpt-4o-mini` | Fast, cheap, great at instruction following |
+| Anthropic | `claude-sonnet-4-20250514` | Excellent reasoning and restructuring |
+| Google | `gemini-2.5-flash` | Fast, strong multilingual |
+| Mistral | `mistral-small-latest` | Good multilingual, European focus |
+| OpenRouter | Any of the above, or local models via proxy |
+
+### Local (Ollama / LM Studio)
+
+| Model | Size | Why |
+|-------|------|-----|
+| `qwen3:8b` | ~5 GB | Best multilingual small model — handles French → English well |
+| `llama3.1:8b` | ~5 GB | Strong general-purpose, good instruction following |
+| `mistral:7b` | ~4 GB | Lightweight, fast inference on any Mac |
+| `deepseek-r1:8b` | ~5 GB | Good reasoning for complex prompt restructuring |
+| `phi4:14b` | ~9 GB | Excellent quality/size ratio if you have 16 GB+ RAM |
+
+> 💡 For local transcription, pair with Whisper (`ollama run whisper` or LM Studio). For prompt refactoring, a 7–8B model is plenty — latency matters more than raw capability here.
+
 ## Stack
 
 - **SwiftUI** + AppKit
